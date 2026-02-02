@@ -1,14 +1,23 @@
 import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 
-const Navbar = ({ links, brand }) => {
+const NAV_LINKS = [
+  { label: "Home", path: "/" },
+  { label: "Contact Us", path: "/contact-us" },
+  { label: "About Us", path: "/about-us" },
+  { label: "Products", path: "/products" },
+];
+
+const BRAND_NAME = "Biggies Corporation";
+
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Brand */}
-        <h1 className="text-lg font-semibold tracking-wide">{brand}</h1>
+        <h1 className="text-lg font-semibold tracking-wide">{BRAND_NAME}</h1>
 
         {/* Hamburger (mobile) */}
         <button
@@ -25,7 +34,7 @@ const Navbar = ({ links, brand }) => {
 
         {/* Desktop menu */}
         <ul className="hidden md:flex gap-6">
-          {links.map((link) => (
+          {NAV_LINKS.map((link) => (
             <li key={link.path}>
               <NavLink
                 to={link.path}
@@ -45,7 +54,7 @@ const Navbar = ({ links, brand }) => {
       {/* Mobile menu */}
       {isOpen && (
         <ul className="md:hidden px-4 pb-4 space-y-3">
-          {links.map((link) => (
+          {NAV_LINKS.map((link) => (
             <li key={link.path} className="border-b border-gray-700 pb-2">
               <NavLink
                 to={link.path}
