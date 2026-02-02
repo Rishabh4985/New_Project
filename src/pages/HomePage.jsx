@@ -1,5 +1,5 @@
 import React from "react";
-import BigCard from "../components/BigCard";
+import HomeCard from "../components/HomeCard";
 
 const HomePage = () => {
   return (
@@ -20,14 +20,14 @@ const HomePage = () => {
 
       {/* Feature cards */}
       <section className="max-w-6xl mx-auto space-y-12">
-        <BigCard
+        <HomeCard
           title="Experienced & Qualified Teachers"
           description="Learn from subject experts with years of teaching experience and proven results."
           image="https://source.unsplash.com/800x600/?teacher,classroom"
           buttonText="Meet Our Teachers"
         />
 
-        <BigCard
+        <HomeCard
           reverse
           title="Live Interactive Online Classes"
           description="Ask questions in real-time, clear doubts instantly, and stay engaged throughout the class."
@@ -35,7 +35,7 @@ const HomePage = () => {
           buttonText="View Class Demo"
         />
 
-        <BigCard
+        <HomeCard
           title="Affordable & Flexible Fee Structure"
           description="High-quality education at prices every parent can afford, with flexible batch timings."
           image="https://source.unsplash.com/800x600/?education,study"

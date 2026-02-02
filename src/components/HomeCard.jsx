@@ -1,6 +1,6 @@
 import React from "react";
 
-const BigCard = ({ title, description, image, buttonText, reverse }) => {
+const HomeCard = ({ title, description, image, buttonText, reverse }) => {
   return (
     <div
       className={`flex flex-col md:flex-row ${
@@ -32,4 +32,4 @@ const BigCard = ({ title, description, image, buttonText, reverse }) => {
   );
 };
 
-export default BigCard;
+export default HomeCard;
